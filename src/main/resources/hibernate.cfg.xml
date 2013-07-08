@@ -6,7 +6,7 @@
   <session-factory>
     <!-- Database connection settings -->
     <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
-    <property name="connection.url">jdbc:hsqldb:hsql://localhost</property>
+    <property name="connection.url">jdbc:hsqldb:hsql://localhost/hibernate</property>
     <property name="connection.username">sa</property>
     <property name="connection.password"></property>
 
@@ -26,9 +26,9 @@
     <property name="show_sql">true</property>
 
     <!-- Drop and re-create the database schema on startup -->
-    <property name="hbm2ddl.auto">update</property>
+    <property name="hbm2ddl.auto">create</property>
     
-    <mapping class="dto.UserDetails"/>
-    <mapping class="dto.Address"/>
+    <mapping class="main.java.dto.UserDetails"/>
+    <mapping class="main.java.dto.Address"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package hibernate;
+package main.java.run;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import dto.Address;
-import dto.UserDetails;
+import main.java.dto.Address;
+import main.java.dto.UserDetails;
 
 public class HibernateTest {
 
