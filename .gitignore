@@ -1,8 +1,8 @@
 /.idea
+.svn
 target
 .project
 .classpath
-.settings
 *.class
 *.jar
 *.ipr
