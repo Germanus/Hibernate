@@ -1,50 +1,0 @@
-10
-
-dir
-84
-https://my-springtest.googlecode.com/svn/Hibernate/src
-https://my-springtest.googlecode.com/svn
-
-
-
-2013-05-25T12:38:15.689789Z
-84
-mmf.kazakevich@gmail.com
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-2a40c76c-6d10-2b77-f10c-9dda3253ead6
-
-database
-dir
-
-dto
-dir
-
-hibernate
-dir
-
-hibernate.cfg.xml
-file
-
-
-
-
-
-8fc2e7442f7a5e6d59055246d96cce8a
-2013-05-25T12:38:15.689789Z
-84
-mmf.kazakevich@gmail.com
-has-props
-
