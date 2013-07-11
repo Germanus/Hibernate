@@ -1,4 +1,4 @@
-package main.java.dto;
+package dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,65 +10,71 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ADDRESS")
+@Table(name = "ADDRESS")
 public class Address {
-	
-	private String street;	
-	private String city;	
-	private String state;	
-	private String pincode;
-	private UserDetails user;
-	private int ID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "ID")
+    private int ID;
+    @Column(name = "STREET_NAME")
+    private String street;
+    @Column(name = "CITY_NAME")
+    private String city;
+    @Column(name = "STATE_NAME")
+    private String state;
+    @Column(name = "PIN_CODE")
+    private String pincode;
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private UserDetails user;
 
-	
-	@Column(name="STREET_NAME")
-	public String getStreet() {
-		return street;
-	}
-	public void setStreet(String street) {
-		this.street = street;
-	}
-	@Column(name="CITY_NAME")
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	@Column(name="STATE_NAME")
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
-	@Column(name="PIN_CODE")
-	public String getPincode() {
-		return pincode;
-	}
-	public void setPincode(String pincode) {
-		this.pincode = pincode;
-	}
-	
-	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="ID")
-	public int getID() {
-		return ID;
-	}
-	public void setID(int iD) {
-		ID = iD;
-	}
-	@ManyToOne
-	@JoinColumn(name="USER_ID")
-	public UserDetails getUser() {
-		return user;
-	}
-	public void setUser(UserDetails user) {
-		this.user = user;
-	}
+    public String getStreet() {
+        return street;
+    }
 
-	
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int iD) {
+        ID = iD;
+    }
+
+    public UserDetails getUser() {
+        return user;
+    }
+
+    public void setUser(UserDetails user) {
+        this.user = user;
+    }
 
 }
