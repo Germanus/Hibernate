@@ -28,9 +28,9 @@
     <!-- Drop and re-create the database schema on startup -->
     <property name="hbm2ddl.auto">create</property>
     
-    <mapping class="dto.UserDetails"/>
-    <mapping class="dto.Address"/>
-    <mapping class="dto.NamedQueryTest"/>
+    <mapping class="my.ilya.dto.UserDetails"/>
+    <mapping class="my.ilya.dto.Address"/>
+    <mapping class="my.ilya.dto.NamedQueryTest"/>
 
 
   </session-factory>

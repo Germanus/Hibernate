@@ -1,4 +1,4 @@
-package dto;
+package my.ilya.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
