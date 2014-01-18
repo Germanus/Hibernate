@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC
     "-//Hibernate/Hibernate Configuration DTD//EN"
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-<hibernate-configuration>     
+<hibernate-configuration>
   <session-factory>
     <!-- Database connection settings -->
     <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
@@ -26,11 +26,9 @@
     <property name="show_sql">true</property>
 
     <!-- Drop and re-create the database schema on startup -->
-    <property name="hbm2ddl.auto">create</property>
+    <property name="hbm2ddl.auto">create-drop</property>
     
-    <mapping class="my.ilya.dto.UserDetails"/>
-    <mapping class="my.ilya.dto.Address"/>
-    <mapping class="my.ilya.dto.NamedQueryTest"/>
+    <mapping class="my.ilya.relationship.model.Aim"/>
 
 
   </session-factory>
