@@ -1,7 +1,6 @@
 package my.ilya.relationship.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +10,29 @@ import javax.persistence.Table;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "AIM")
+@Table(name = "DESCRIPTION")
 public class Description {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "ID")
+    private long id;
+    @Column(name = "NAME")
+    private String name;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

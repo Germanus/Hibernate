@@ -29,6 +29,7 @@
     <property name="hbm2ddl.auto">create-drop</property>
     
     <mapping class="my.ilya.relationship.model.Aim"/>
+    <mapping class="my.ilya.relationship.model.Description"/>
 
 
   </session-factory>
