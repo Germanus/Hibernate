@@ -20,6 +20,7 @@ public class Description {
     @Column(name = "NAME")
     private String name;
 
+
     public long getId() {
         return id;
     }
@@ -35,4 +36,6 @@ public class Description {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

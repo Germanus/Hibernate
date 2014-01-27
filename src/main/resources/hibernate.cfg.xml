@@ -30,6 +30,9 @@
     
     <mapping class="my.ilya.relationship.model.Aim"/>
     <mapping class="my.ilya.relationship.model.Description"/>
+    <mapping class="my.ilya.relationship.model.SubAim"/>
+    <mapping class="my.ilya.relationship.model.Subject"/>
+
 
 
   </session-factory>
