@@ -32,6 +32,9 @@
     <mapping class="my.ilya.relationship.model.Description"/>
     <mapping class="my.ilya.relationship.model.SubAim"/>
     <mapping class="my.ilya.relationship.model.Subject"/>
+    <mapping class="my.ilya.inheritence.model.OrderItem"/>
+    <mapping class="my.ilya.inheritence.model.TransferOrderItem"/>
+    <mapping class="my.ilya.inheritence.model.ExpulsionOrderItem"/>
 
 
 
