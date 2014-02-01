@@ -38,6 +38,9 @@
         <mapping class="my.ilya.inheritance.model.discriminator.OrderItemSingle"/>
         <mapping class="my.ilya.inheritance.model.discriminator.TransferOrderItemSingle"/>
         <mapping class="my.ilya.inheritance.model.discriminator.ExpulsionOrderItemSingle"/>
+        <mapping class="my.ilya.inheritance.model.perclass.OrderItemPer"/>
+        <mapping class="my.ilya.inheritance.model.perclass.TransferOrderItemPer"/>
+        <mapping class="my.ilya.inheritance.model.perclass.ExpulsionOrderItemPer"/>
 
 
     </session-factory>

@@ -1,7 +1,8 @@
-package my.ilya.inheritence.model;
+package my.ilya.inheritance.model.perclass;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -12,7 +13,8 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class ExpulsionOrderItem extends OrderItem{
+@Table(name = "EXPULSION_PER")
+public class ExpulsionOrderItemPer extends OrderItemPer {
 
     @Column(name = "EXPULSION_DATE")
     private Date expulsionDate;

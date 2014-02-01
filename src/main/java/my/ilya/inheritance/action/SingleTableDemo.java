@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * @author KAZAKEVICH
  */
-public class SingleTableInheritanceDemo {
+public class SingleTableDemo {
 
     private static SessionFactory sessionFactory = HibernateUtil.configureSessionFactory();
 
