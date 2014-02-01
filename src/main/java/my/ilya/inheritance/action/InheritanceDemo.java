@@ -1,31 +1,30 @@
-package my.ilya.inheritence.action;
+package my.ilya.inheritance.action;
 
 import my.ilya.common.HibernateUtil;
-import my.ilya.inheritence.model.ExpulsionOrderItem;
-import my.ilya.inheritence.model.OrderItem;
-import my.ilya.inheritence.model.TransferOrderItem;
+import my.ilya.inheritance.model.initial.ExpulsionOrderItem;
+import my.ilya.inheritance.model.initial.OrderItem;
+import my.ilya.inheritance.model.initial.TransferOrderItem;
 import my.ilya.relationship.model.Aim;
 import my.ilya.relationship.model.Description;
 import my.ilya.relationship.model.SubAim;
-import my.ilya.relationship.model.Subject;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.util.Date;
 
-public class InheritenceDemo {
+public class InheritanceDemo {
 
     private static SessionFactory sessionFactory = HibernateUtil.configureSessionFactory();
 
     public static void main(String[] args) {
 
         //clearTables();
-        defaultInheritence();
+        defaultInheritance();
 
     }
 
-    private static void defaultInheritence() {
+    private static void defaultInheritance() {
         OrderItem orderItem = new OrderItem();
         orderItem.setName("Main order");
 

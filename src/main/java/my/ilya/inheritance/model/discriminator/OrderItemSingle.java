@@ -1,4 +1,4 @@
-package my.ilya.inheritence.model;
+package my.ilya.inheritance.model.discriminator;
 
 import javax.persistence.*;
 
@@ -10,8 +10,11 @@ import javax.persistence.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "ORDER_ITEM")
-public class OrderItem {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "ORDER_TYPE", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("ORDER_ITEM_DISC")
+@Table(name = "ORDER_ITEM_DISC")
+public class OrderItemSingle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
