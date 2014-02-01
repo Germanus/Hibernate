@@ -41,6 +41,9 @@
         <mapping class="my.ilya.inheritance.model.perclass.OrderItemPer"/>
         <mapping class="my.ilya.inheritance.model.perclass.TransferOrderItemPer"/>
         <mapping class="my.ilya.inheritance.model.perclass.ExpulsionOrderItemPer"/>
+        <mapping class="my.ilya.inheritance.model.joined.OrderItemJoined"/>
+        <mapping class="my.ilya.inheritance.model.joined.TransferOrderItemJoined"/>
+        <mapping class="my.ilya.inheritance.model.joined.ExpulsionOrderItemJoined"/>
 
 
     </session-factory>
