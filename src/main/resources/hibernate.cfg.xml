@@ -26,9 +26,9 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="my.ilya.relationship.model.Aim"/>
+        <!--<mapping class="my.ilya.relationship.model.Aim"/>
         <mapping class="my.ilya.relationship.model.Description"/>
         <mapping class="my.ilya.relationship.model.SubAim"/>
         <mapping class="my.ilya.relationship.model.Subject"/>
@@ -43,7 +43,8 @@
         <mapping class="my.ilya.inheritance.model.perclass.ExpulsionOrderItemPer"/>
         <mapping class="my.ilya.inheritance.model.joined.OrderItemJoined"/>
         <mapping class="my.ilya.inheritance.model.joined.TransferOrderItemJoined"/>
-        <mapping class="my.ilya.inheritance.model.joined.ExpulsionOrderItemJoined"/>
+        <mapping class="my.ilya.inheritance.model.joined.ExpulsionOrderItemJoined"/> -->
+        <mapping class="my.ilya.crud.model.Phone"/>
 
 
     </session-factory>

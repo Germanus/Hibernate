@@ -1,5 +1,6 @@
 package my.ilya.common;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
@@ -14,5 +15,39 @@ public final class HibernateUtil {
                 new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
         return configuration.buildSessionFactory(serviceRegistry);
     }
+
+    public static void saveObject(Object object){
+        Session session = configureSessionFactory().openSession();
+        session.beginTransaction();
+        session.persist(object);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    public static <T> T findObjectById(Class<T> clazz, int id){
+        Session session = configureSessionFactory().openSession();
+        session.beginTransaction();
+        T loaded = (T) session.get(clazz, id);
+        session.getTransaction().commit();
+        session.close();
+        return loaded;
+    }
+
+    public static void deleteObject(Object o){
+        Session session = configureSessionFactory().openSession();
+        session.beginTransaction();
+        session.delete(o);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    public static void mergeObject(Object o){
+        Session session = configureSessionFactory().openSession();
+        session.beginTransaction();
+        session.merge(o);
+        session.getTransaction().commit();
+        session.close();
+    }
+
 
 }
