@@ -17,60 +17,60 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="USER_DETAILS")
+@Table(name = "USER_DETAILS")
 public class UserDetails {
 
-    @Id @GeneratedValue(strategy=GenerationType.SEQUENCE)
-    @Column(name="USER_ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "USER_ID")
     private int userId;
-    @Column(name="USER_NAME")
-	private String userName;
+    @Column(name = "USER_NAME")
+    private String userName;
     @Temporal(TemporalType.DATE)
-	private Date joinedDate;
+    private Date joinedDate;
     @Lob
-	private String description;
-    @OneToMany(mappedBy="user",fetch = FetchType.LAZY)
-	private Set<Address> addresses = new HashSet<Address>();
+    private String description;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private Set<Address> addresses = new HashSet<Address>();
 
-	public int getUserId() {
-		return userId;
-	}
-	
-	public void setUserId(int userId) {
-		this.userId = userId;  
-	}
-	
+    public int getUserId() {
+        return userId;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
-	public Date getJoinedDate() {
-		return joinedDate;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public void setJoinedDate(Date joinedDate) {
-		this.joinedDate = joinedDate;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public Date getJoinedDate() {
+        return joinedDate;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setJoinedDate(Date joinedDate) {
+        this.joinedDate = joinedDate;
+    }
 
-	public Set<Address> getAddresses() {
-		return addresses;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setAddresses(Set<Address> addresses) {
-		this.addresses = addresses;
-	}
-	
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Set<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(Set<Address> addresses) {
+        this.addresses = addresses;
+    }
+
 }
