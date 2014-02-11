@@ -20,7 +20,7 @@ public final class KindDemo {
         //second test
         //third test
         //4 4 4 4 4
-        //master
+        //66666666
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.save(phone);
