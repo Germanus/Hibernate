@@ -16,8 +16,8 @@ public final class KindDemo {
         //Пока объект не сохранен он - transient
         Phone phone = new Phone();
         phone.setNumber(5L);
-        //test
-        //rebase - branch
+        //mater flamaster
+
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
