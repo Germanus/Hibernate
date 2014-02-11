@@ -19,7 +19,7 @@ public final class KindDemo {
         //test branch
         //second test
         //third test
-        //master test
+        //4 4 4 4 4
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.save(phone);
