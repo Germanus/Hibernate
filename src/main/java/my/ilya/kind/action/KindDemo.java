@@ -17,6 +17,7 @@ public final class KindDemo {
         Phone phone = new Phone();
         phone.setNumber(5L);
         //test
+        //remote branch
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
