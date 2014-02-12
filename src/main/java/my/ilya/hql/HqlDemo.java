@@ -19,7 +19,11 @@ public final class HqlDemo {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery("from Phone");
+        //Pagination
+        query.setFirstResult(1);
+        query.setMaxResults(2);
         List<Phone> list = query.list();
+
         //После того как открыта сессия и объект сохранет
         //до закрытия сессии это persistent объект
         session.getTransaction().commit();
