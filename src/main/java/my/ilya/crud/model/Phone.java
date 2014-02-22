@@ -18,6 +18,9 @@ import javax.persistence.Table;
  */
 
 @Entity
+@NamedQuery(name = "getPhoneById", query = "from Phone where id=?")
+@NamedNativeQuery(name = "getNativePhoneById", query =
+        "select * from PHONE where NUMBER=?", resultClass = Phone.class)
 @Table(name = "PHONE")
 public class Phone {
     @Id
