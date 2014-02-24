@@ -20,7 +20,14 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Disable the second-level cache  -->
-        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!--<property name="hibernate.cache.provider_class">-->
+             <!--org.hibernate.cache.ehcache.EhCacheRegionFactory-->
+         <!--</property>-->
+        <property name="hibernate.cache.region.factory_class">
+            org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+        <property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
@@ -45,6 +52,7 @@
         <mapping class="my.ilya.inheritance.model.joined.TransferOrderItemJoined"/>
         <mapping class="my.ilya.inheritance.model.joined.ExpulsionOrderItemJoined"/> -->
         <mapping class="my.ilya.crud.model.Phone"/>
+
 
 
     </session-factory>

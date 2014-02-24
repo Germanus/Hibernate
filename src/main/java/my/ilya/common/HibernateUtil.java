@@ -13,6 +13,9 @@ public final class HibernateUtil {
         configuration.configure();
         ServiceRegistry serviceRegistry =
                 new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
+        configuration.setProperty("hibernate.cache.region.factory_class",
+                "org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory");
+
         return configuration.buildSessionFactory(serviceRegistry);
     }
 

@@ -1,6 +1,7 @@
 package my.ilya.crud.model;
 
 import my.ilya.dto.UserDetails;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
@@ -22,6 +23,8 @@ import javax.persistence.Table;
 @NamedNativeQuery(name = "getNativePhoneById", query =
         "select * from PHONE where NUMBER=?", resultClass = Phone.class)
 @Table(name = "PHONE")
+//@Cacheable
+@org.hibernate.annotations.Cache (usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Phone {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
