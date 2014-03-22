@@ -27,7 +27,7 @@
          <!--</property>-->
         <property name="hibernate.cache.region.factory_class">
             org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
-        <property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>
+        <!--<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>-->
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
