@@ -1,4 +1,4 @@
-package my.ilya.dto.run;
+package my.ilya.run;
 
 import my.ilya.dto.Address;
 import my.ilya.dto.UserDetails;

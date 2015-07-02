@@ -1,4 +1,4 @@
-package my.ilya.dto.run;
+package my.ilya.run;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class NamedQueryRun {
     private static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
     public static void main(String[] args) {
-
+    	
         NamedQueryTest test = new NamedQueryTest();
         test.setName("ilya");
         saveNQ(test);
@@ -32,6 +32,7 @@ public class NamedQueryRun {
         }
         System.out.println("-------------");
     }
+   
 
     private static void saveNQ(NamedQueryTest test) {
         Session session = sessionFactory.openSession();

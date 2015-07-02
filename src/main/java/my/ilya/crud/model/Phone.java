@@ -33,6 +33,10 @@ public class Phone {
     @Column(name = "NUMBER")
     private Long number;
 
+    @Version
+    @Column(name = "VERSION")
+    private Long version;
+
     public int getID() {
         return ID;
     }
@@ -48,5 +52,15 @@ public class Phone {
     public void setNumber(Long number) {
         this.number = number;
     }
+
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
+	}
+    
+    
 }
 

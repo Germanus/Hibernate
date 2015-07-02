@@ -52,6 +52,7 @@
         <mapping class="my.ilya.inheritance.model.joined.TransferOrderItemJoined"/>
         <mapping class="my.ilya.inheritance.model.joined.ExpulsionOrderItemJoined"/> -->
         <mapping class="my.ilya.crud.model.Phone"/>
+        <mapping class="my.ilya.crud.model.User"/>
 
 
 

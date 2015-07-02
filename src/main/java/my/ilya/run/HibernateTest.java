@@ -1,4 +1,4 @@
-package my.ilya.dto.run;
+package my.ilya.run;
 
 import java.io.File;
 import java.io.IOException;
